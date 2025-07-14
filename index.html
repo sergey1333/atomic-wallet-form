@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Atomic Wallet Theft Report Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            margin: 0;
+            padding: 20px;
+        }
+        .form-container {
+            background: white;
+            max-width: 600px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        input[type="submit"] {
+            margin-top: 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Atomic Wallet Theft Report</h1>
+        <form action="mailto:satmobile10@hotmail.com" method="POST" enctype="text/plain">
+            <label for="name">Your Name or Nickname:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="country">Country of Residence:</label>
+            <input type="text" id="country" name="country">
+
+            <label for="date">Date of Theft:</label>
+            <input type="date" id="date" name="date">
+
+            <label for="amount">Amount Lost (with currency, e.g. ETH, BTC):</label>
+            <input type="text" id="amount" name="amount">
+
+            <label for="blockchain">Blockchain Used:</label>
+            <input list="blockchain-options" id="blockchain" name="blockchain" placeholder="Start typing or select">
+            <datalist id="blockchain-options">
+                <option value="USDT">
+                <option value="BTC">
+                <option value="ETH">
+                <option value="ETC">
+                <option value="DASH">
+                <option value="DOGE">
+                <option value="TON">
+                <option value="XRP">
+                <option value="KAS">
+                <option value="OCTA">
+            </datalist>
+
+            <label for="wallet_type">Wallet Type:</label>
+            <select id="wallet_type" name="wallet_type">
+                <option value="desktop">Desktop</option>
+                <option value="mobile">Mobile</option>
+                <option value="hardware">Hardware</option>
+                <option value="web">Web</option>
+            </select>
+
+            <label for="details">Details of the Theft / Comments:</label>
+            <textarea id="details" name="details" rows="6" placeholder="When, how it happened, TX hashes, etc."></textarea>
+
+            <input type="submit" value="Send Report">
+        </form>
+    </div>
+</body>
+</html>
